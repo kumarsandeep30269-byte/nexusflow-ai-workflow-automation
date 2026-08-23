@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusFlow - Next-Gen AI Workflows</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/25">
+          <i class="fa-solid fa-bolt text-lg"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-400">NexusFlow</span>
+      </div>
+      
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#features" class="hover:text-white transition">Features</a>
+        <a href="#demo" class="hover:text-white transition">Live Demo</a>
+        <a href="#pricing" class="hover:text-white transition">Pricing</a>
+        <a href="#testimonials" class="hover:text-white transition">Reviews</a>
+        <a href="#faq" class="hover:text-white transition">FAQ</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <button onclick="openModal()" class="text-sm font-medium text-slate-300 hover:text-white transition">Sign In</button>
+        <button onclick="openModal()" class="px-4 py-2 text-sm font-semibold rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white transition shadow-md shadow-indigo-600/30">Get Started Free</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center relative overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    
+    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-950/40 text-indigo-300 text-xs font-medium mb-6">
+      <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+      <span>Nexus 3.0 Engine Released</span>
+      <i class="fa-solid fa-arrow-right text-[10px]"></i>
+    </div>
+
+    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.1]">
+      Automate intelligent workflows <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">in seconds</span>
+    </h1>
+    
+    <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+      Connect your apps, deploy autonomous AI agents, and eliminate repetitive tasks with our zero-code enterprise orchestration engine.
+    </p>
+
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <button onclick="openModal()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-semibold shadow-lg shadow-indigo-500/25 transition">
+        Start Free Trial
+      </button>
+      <a href="#demo" class="w-full sm:w-auto px-8 py-3.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 text-slate-200 font-semibold transition flex items-center justify-center space-x-2">
+        <i class="fa-solid fa-play text-xs text-indigo-400"></i>
+        <span>Watch 2-Min Demo</span>
+      </a>
+    </div>
+
+    <!-- Product Preview Card -->
+    <div id="demo" class="mt-14 p-2 sm:p-4 rounded-2xl bg-gradient-to-b from-slate-800/60 to-slate-900/30 border border-slate-800 shadow-2xl backdrop-blur-xl">
+      <div class="bg-slate-950 rounded-xl p-4 sm:p-6 border border-slate-800/80 text-left">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-2">
+            <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
+            <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+            <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+            <span class="ml-2 text-xs font-mono text-slate-400">workflow_orchestrator.ts</span>
+          </div>
+          <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Active • 99.99% Uptime</span>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+          <div class="p-4 rounded-lg bg-slate-900/80 border border-slate-800">
+            <div class="text-xs text-slate-400 font-mono">1. TRIGGER</div>
+            <div class="text-sm font-semibold text-white mt-1 flex items-center space-x-2">
+              <i class="fa-brands fa-slack text-purple-400"></i>
+              <span>Customer Request on Slack</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-2">Parsed sentiment & urgency using NLP</p>
+          </div>
+
+          <div class="p-4 rounded-lg bg-indigo-950/40 border border-indigo-500/30">
+            <div class="text-xs text-indigo-400 font-mono">2. REASONING ENGINE</div>
+            <div class="text-sm font-semibold text-white mt-1 flex items-center space-x-2">
+              <i class="fa-solid fa-microchip text-indigo-400"></i>
+              <span>AI Multi-Agent Triage</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-2">Generated SQL query & validated customer plan</p>
+          </div>
+
+          <div class="p-4 rounded-lg bg-slate-900/80 border border-slate-800">
+            <div class="text-xs text-slate-400 font-mono">3. RESOLUTION</div>
+            <div class="text-sm font-semibold text-white mt-1 flex items-center space-x-2">
+              <i class="fa-brands fa-github text-slate-300"></i>
+              <span>Auto-Deployed PR & Reply</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-2">Completed in 1.4 seconds</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section id="features" class="py-20 bg-slate-900/40 border-y border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-semibold uppercase tracking-widest text-indigo-400">Enterprise Capabilities</h2>
+        <p class="mt-2 text-3xl sm:text-4xl font-bold text-white tracking-tight">Engineered for speed, built for reliability</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/40 transition group">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white">Autonomous Agent Swarms</h3>
+          <p class="mt-3 text-slate-400 text-sm leading-relaxed">Deploy cooperative agents that diagnose issues, draft pull requests, and manage pipelines autonomously.</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/40 transition group">
+          <div class="w-12 h-12 rounded-xl bg-violet-500/10 text-violet-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white">Zero-Knowledge Security</h3>
+          <p class="mt-3 text-slate-400 text-sm leading-relaxed">End-to-end encrypted execution with SOC2 Type II compliance and fine-grained role-based permissions.</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/40 transition group">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white">Real-Time Observability</h3>
+          <p class="mt-3 text-slate-400 text-sm leading-relaxed">Full execution trace telemetry, cost profiling per agent, and instant audit trails for compliance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Pricing Section -->
+  <section id="pricing" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-indigo-400">Pricing</h2>
+      <p class="mt-2 text-3xl sm:text-4xl font-bold text-white tracking-tight">Predictable plans that scale with you</p>
+      
+      <!-- Billing Toggle -->
+      <div class="mt-6 inline-flex items-center p-1 rounded-xl bg-slate-900 border border-slate-800">
+        <button id="btn-monthly" onclick="setBilling('monthly')" class="px-4 py-1.5 rounded-lg text-sm font-semibold bg-indigo-600 text-white transition">Monthly</button>
+        <button id="btn-annual" onclick="setBilling('annual')" class="px-4 py-1.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1">
+          <span>Annual</span>
+          <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">-20%</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Starter Plan -->
+      <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between">
+        <div>
+          <div class="text-lg font-bold text-white">Starter</div>
+          <p class="text-xs text-slate-400 mt-1">Perfect for solo developers & side projects</p>
+          <div class="mt-6 flex items-baseline space-x-1">
+            <span class="text-4xl font-extrabold text-white" id="price-starter">$29</span>
+            <span class="text-slate-400 text-sm">/month</span>
+          </div>
+          <ul class="mt-6 space-x-0 space-y-3 text-sm text-slate-300">
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span>5 Autonomous Agents</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span>10,000 monthly executions</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span>Community Support</span></li>
+          </ul>
+        </div>
+        <button onclick="openModal()" class="mt-8 w-full py-3 rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-700 text-white font-semibold transition">Get Started</button>
+      </div>
+
+      <!-- Pro Plan (Popular) -->
+      <div class="p-8 rounded-2xl bg-gradient-to-b from-indigo-950/60 to-slate-900 border-2 border-indigo-500 flex flex-col justify-between relative shadow-xl shadow-indigo-500/10">
+        <div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-indigo-500 text-white text-xs font-bold uppercase tracking-wider">Most Popular</div>
+        <div>
+          <div class="text-lg font-bold text-white">Pro Studio</div>
+          <p class="text-xs text-indigo-300 mt-1">For fast-moving product teams</p>
+          <div class="mt-6 flex items-baseline space-x-1">
+            <span class="text-4xl font-extrabold text-white" id="price-pro">$79</span>
+            <span class="text-slate-400 text-sm">/month</span>
+          </div>
+          <ul class="mt-6 space-y-3 text-sm text-slate-300">
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span>Unlimited Agents</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span>150,000 monthly executions</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span>Custom integrations & Webhooks</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span>Priority 24/7 Support</span></li>
+          </ul>
+        </div>
+        <button onclick="openModal()" class="mt-8 w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold shadow-lg shadow-indigo-600/30 transition">Start 14-Day Free Trial</button>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between">
+        <div>
+          <div class="text-lg font-bold text-white">Enterprise</div>
+          <p class="text-xs text-slate-400 mt-1">For large-scale security & custom SLAs</p>
+          <div class="mt-6 flex items-baseline space-x-1">
+            <span class="text-4xl font-extrabold text-white" id="price-enterprise">$299</span>
+            <span class="text-slate-400 text-sm">/month</span>
+          </div>
+          <ul class="mt-6 space-y-3 text-sm text-slate-300">
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span>Dedicated VPC Deployment</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span>Unlimited executions & SLAs</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> <span>Dedicated Account Engineer</span></li>
+          </ul>
+        </div>
+        <button onclick="openModal()" class="mt-8 w-full py-3 rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-700 text-white font-semibold transition">Contact Sales</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Modal -->
+  <div id="authModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <h3 class="text-xl font-bold text-white">Join NexusFlow</h3>
+      <p class="text-xs text-slate-400 mt-1">Start building autonomous AI pipelines in minutes.</p>
+      
+      <form onsubmit="handleLeadSubmit(event)" class="mt-6 space-y-4">
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Work Email</label>
+          <input type="email" required placeholder="you@company.com" class="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:border-indigo-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Company Size</label>
+          <select class="w-full px-4 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:border-indigo-500 focus:outline-none">
+            <option>1-10 employees</option>
+            <option>11-50 employees</option>
+            <option>50+ employees</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm transition shadow-lg shadow-indigo-600/30">
+          Create Free Account
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="py-12 border-t border-slate-800 text-center text-xs text-slate-500">
+    <p>© 2026 NexusFlow Inc. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function setBilling(type) {
+      const btnMonthly = document.getElementById('btn-monthly');
+      const btnAnnual = document.getElementById('btn-annual');
+      const pStarter = document.getElementById('price-starter');
+      const pPro = document.getElementById('price-pro');
+      const pEnterprise = document.getElementById('price-enterprise');
+
+      if (type === 'annual') {
+        btnAnnual.className = 'px-4 py-1.5 rounded-lg text-sm font-semibold bg-indigo-600 text-white transition flex items-center space-x-1';
+        btnMonthly.className = 'px-4 py-1.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition';
+        pStarter.textContent = '$23';
+        pPro.textContent = '$63';
+        pEnterprise.textContent = '$239';
+      } else {
+        btnMonthly.className = 'px-4 py-1.5 rounded-lg text-sm font-semibold bg-indigo-600 text-white transition';
+        btnAnnual.className = 'px-4 py-1.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition flex items-center space-x-1';
+        pStarter.textContent = '$29';
+        pPro.textContent = '$79';
+        pEnterprise.textContent = '$299';
+      }
+    }
+
+    function openModal() {
+      const modal = document.getElementById('authModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('authModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function handleLeadSubmit(e) {
+      e.preventDefault();
+      alert('Thank you! Your workspace account is ready. Redirecting to onboarding...');
+      closeModal();
+    }
+  </script>
+</body>
+</html>
